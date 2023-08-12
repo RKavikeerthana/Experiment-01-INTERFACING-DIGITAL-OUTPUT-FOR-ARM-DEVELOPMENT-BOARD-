@@ -77,13 +77,36 @@ The main features of LPC2148 include the following.
 
 
 
-
+```
 ## STM 32 CUBE PROGRAM :
 
+#include "main.h"
+void SystemClock_Config(void);
+int main(void)
+{
+  
+  HAL_Init();
 
+  SystemClock_Config();
+
+  while (1)
+  {
+	       HAL_GPIO_WritePin(GPI0A, GIO_PIN_5,GPIO_PIN_RESET);
+	       HAL_Delay(1000);
+	       HAL_GPIO_WritePin(GPI0A, GIO_PIN_5,GPIO_PIN_SET);
+	       HAL_Delay(1000);
+
+  }
+ 
+}
+
+```
 
 ## Output  :
- 
+![image](https://github.com/RKavikeerthana/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/120431120/77d40e2d-7c10-48ea-9cab-efb3d70923d5)
+
+ ![image](https://github.com/RKavikeerthana/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/120431120/0f6fb628-9b36-4305-92d5-0172f5cadb7c)
+
  
  
  
